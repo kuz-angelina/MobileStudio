@@ -97,6 +97,7 @@ public class AddOrderActivity extends AppCompatActivity implements View.OnClickL
         finish();
         break;
       case R.id.btBack:
+      case R.id.btCancel:
         finish();
         break;
       case R.id.textViewServiceListInit:
@@ -119,6 +120,7 @@ public class AddOrderActivity extends AppCompatActivity implements View.OnClickL
     }
 
   }
+
 
   @Override
   protected void onActivityResult(int requestCode, int resultCode, Intent data)
