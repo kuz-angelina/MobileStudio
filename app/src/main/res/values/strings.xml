@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Android studio</string>
+
+    <!--    user info table-->
+    <string name="tv_user_info">Информация о пользователе</string>
+    <string name="tv_user_info_login">Логин</string>
+    <string name="tv_user_info_name">Имя</string>
+    <string name="tv_user_info_phone">Телефон</string>
+    <string name="tv_user_info_email">email</string>
+    <!--    tableDataOrder table-->
+    <string name="order_number">Номер</string>
+    <string name="order_service">Вид сервиса</string>
+    <string name="order_repairtype">Вид ремонта</string>
+    <string name="order_clothetype">Вид одежды</string>
+    <string name="order_cost">Стоимость заказа</string>
+    <string name="order_complete">Заказ готов</string>
+
+    <!--    buttons -->
+    <string name="button_back">Назад</string>
+    <string name="button_cancel">Отмена</string>
+    <string name="button_add_order">Добавить заказ</string>
+    <string name="button_show_order">Просмотреть заказы</string>
+    <string name="button_save_order">Сохранить заказ</string>
+    <string name="button_login">Войти</string>
+    <string name="button_remove_order">Удалить заказ</string>
+
+    <!--    text view as button -->
+    <string name="textView_as_list">Выберите значение…</string>
+
+    <!--    notification -->
+    <string name="order_add_complete">Заказ добавлен</string>
+    <string name="order_edit_complete">Заказ обновлен</string>
+    <string name="order_remove_complete">Заказ Удален</string>
+
+    <!--    list view -->
+    <string-array name="serviceTypeListContent">
+        <item>Ремонт</item>
+        <item>Пошив</item>
+    </string-array>
+    <string-array name="repairTypeListContent">
+        <item>Укоротить</item>
+        <item>Покрасить</item>
+        <item>Сварить</item>
+        <item>Обрезать</item>
+    </string-array>
+    <string-array name="clotherTypeListContent">
+        <item>Рубашка</item>
+        <item>Джинсы</item>
+        <item>Кофта</item>
+        <item>Блузка</item>
+        <item>Носки</item>
+    </string-array>
+</resources>

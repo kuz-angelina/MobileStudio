@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <!--    for orders table-->
+    <color name="order_table_textColor_head">#000</color>
+    <color name="order_table_text_background">#7fc342</color>
+</resources>
