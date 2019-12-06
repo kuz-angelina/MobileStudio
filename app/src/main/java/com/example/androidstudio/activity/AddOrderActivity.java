@@ -133,7 +133,18 @@ public class AddOrderActivity extends AppCompatActivity implements View.OnClickL
     {
       case 1:
         textViewServiceListInit.setText(data.getStringExtra("name"));
-        tableDataOrder.setServiceTypeId(data.getIntExtra("id", 1));
+        int serivceId = data.getIntExtra("id", 1);
+        tableDataOrder.setServiceTypeId(serivceId);
+        if (serivceId == 1)
+        {
+          textViewRepairListInit.setOnClickListener(null);
+          textViewRepairListInit.setText("---");
+        }
+        else
+        {
+          textViewRepairListInit.setOnClickListener(this);
+          textViewRepairListInit.setText(R.string.textView_as_list);
+        }
         break;
       case 2:
         textViewRepairListInit.setText(data.getStringExtra("name"));

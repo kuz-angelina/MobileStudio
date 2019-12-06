@@ -156,13 +156,25 @@ public class OrdersActivity extends AppCompatActivity implements View.OnClickLis
       TableDataOrder tableDataOrder = tableDataOrderList.get(rowIndex - 1);
       Intent intent = new Intent(this, AddOrderActivity.class);
       intent.putExtra("tableDataOrder", tableDataOrder);
-      startActivity(intent);
+      startActivityForResult(intent, 1);
     }
 
   }
   @Override
   protected void onActivityResult(int requestCode, int resultCode, Intent data)
   {
-    this.onCreate(Bundle.EMPTY);
+    GetOrdersTask getOrdersTask = new GetOrdersTask();
+    getOrdersTask.execute(clientId);
+    try
+    {
+      tableDataOrderList = getOrdersTask.get();
+    }
+    catch (ExecutionException | InterruptedException e)
+    {
+      e.printStackTrace();
+    }
+    tableLayout.removeAllViews();
+    initGridHead();
+    initGridData(tableDataOrderList);
   }
 }
