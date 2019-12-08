@@ -37,7 +37,7 @@ public class OrdersActivity extends AppCompatActivity implements View.OnClickLis
     btBack_orders.setOnClickListener(this);
     Bundle params = getIntent().getExtras();
     clientId= (Integer) params.getSerializable("user_id");
-    GetOrdersTask getOrdersTask = new GetOrdersTask();
+    GetOrdersTask getOrdersTask = new GetOrdersTask(getApplicationContext());
     getOrdersTask.execute(clientId);
     try
     {
@@ -163,7 +163,7 @@ public class OrdersActivity extends AppCompatActivity implements View.OnClickLis
   @Override
   protected void onActivityResult(int requestCode, int resultCode, Intent data)
   {
-    GetOrdersTask getOrdersTask = new GetOrdersTask();
+    GetOrdersTask getOrdersTask = new GetOrdersTask(getApplicationContext());
     getOrdersTask.execute(clientId);
     try
     {

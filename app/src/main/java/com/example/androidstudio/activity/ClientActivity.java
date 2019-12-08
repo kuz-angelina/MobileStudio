@@ -67,6 +67,7 @@ public class ClientActivity extends AppCompatActivity implements View.OnClickLis
         break;
       case R.id.btLogout:
         finish();
+        moveTaskToBack(true);
       default:
         break;
     }

@@ -79,19 +79,19 @@ public class AddOrderActivity extends AppCompatActivity implements View.OnClickL
     switch (v.getId())
     {
       case R.id.btAddOrder_order:
-        SendOrderTask sendOrderTask = new SendOrderTask();
+        SendOrderTask sendOrderTask = new SendOrderTask(getApplicationContext());
         sendOrderTask.execute(tableDataOrder);
         Toast.makeText(this, R.string.order_add_complete, Toast.LENGTH_LONG).show();
         finish();
         break;
       case R.id.btSaveOrder:
-        UpdateOrderTask updateOrderTask = new UpdateOrderTask();
+        UpdateOrderTask updateOrderTask = new UpdateOrderTask(getApplicationContext());
         updateOrderTask.execute(tableDataOrder);
         Toast.makeText(this, R.string.order_edit_complete, Toast.LENGTH_LONG).show();
         finish();
         break;
       case R.id.btRemoveOrder:
-        RemoveOrderTask removeOrderTask = new RemoveOrderTask();
+        RemoveOrderTask removeOrderTask = new RemoveOrderTask(getApplicationContext());
         removeOrderTask.execute(tableDataOrder.getId());
         Toast.makeText(this, R.string.order_remove_complete, Toast.LENGTH_LONG).show();
         finish();

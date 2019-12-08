@@ -12,8 +12,7 @@ import com.example.androidstudio.services.OrderService;
  */
 public class OrderServiceImpl implements OrderService
 {
-	String url = "http://10.0.2.2:8080/order";
-
+	String url;
 	HessianProxyFactory factory = new HessianProxyFactory();
 	OrderService orderService;
 
@@ -108,5 +107,10 @@ public class OrderServiceImpl implements OrderService
 			e.printStackTrace();
 		}
 		orderService.updateOrder(tableDataOrder);
+	}
+
+	public OrderServiceImpl(String url)
+	{
+		this.url = url;
 	}
 }

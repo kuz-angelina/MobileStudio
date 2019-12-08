@@ -50,7 +50,7 @@ public class Main extends AppCompatActivity
     {
       login = String.valueOf(fieldLogin.getText());
       pass = String.valueOf(fieldPass.getText());
-      GetUserTask getUserTask = new GetUserTask();
+      GetUserTask getUserTask = new GetUserTask(getApplicationContext());
       getUserTask.execute(login);
       try
       {

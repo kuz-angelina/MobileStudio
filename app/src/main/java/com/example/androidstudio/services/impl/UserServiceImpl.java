@@ -9,12 +9,14 @@ import com.example.androidstudio.model.role.User;
 import com.example.androidstudio.model.role.UserType;
 import com.example.androidstudio.services.UserService;
 
+import android.app.Application;
+
 /**
  * @author Angelina Kuzmina
  */
 public class UserServiceImpl implements UserService
 {
-	String url = "http://10.0.2.2:8080/user";
+	String url;
 	HessianProxyFactory factory = new HessianProxyFactory();
 	UserService userService;
 
@@ -67,5 +69,10 @@ public class UserServiceImpl implements UserService
 	public boolean saveUser(User user)
 	{
 		return false;
+	}
+
+	public UserServiceImpl(String url)
+	{
+		this.url = url;
 	}
 }
