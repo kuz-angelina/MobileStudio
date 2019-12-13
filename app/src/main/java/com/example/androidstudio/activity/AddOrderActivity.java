@@ -135,7 +135,7 @@ public class AddOrderActivity extends AppCompatActivity implements View.OnClickL
         textViewServiceListInit.setText(data.getStringExtra("name"));
         int serivceId = data.getIntExtra("id", 1);
         tableDataOrder.setServiceTypeId(serivceId);
-        if (serivceId == 1)
+        if (serivceId == 2)
         {
           textViewRepairListInit.setOnClickListener(null);
           textViewRepairListInit.setText("---");

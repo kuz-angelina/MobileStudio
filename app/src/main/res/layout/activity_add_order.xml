@@ -1,139 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#32343A"
-        tools:context=".activity.AddOrderActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9C97FD"
+    tools:context=".activity.AddOrderActivity">
 
     <TableLayout
-            android:id="@+id/tableLayout"
-            android:layout_width="409dp"
-            android:layout_height="200dp"
-            android:layout_marginTop="104dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+        android:id="@+id/tableLayout"
+        android:layout_width="409dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="104dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewServiceType"
+                android:layout_width="197dp"
+                android:layout_height="wrap_content"
+                android:text="@string/order_service"
+                android:textAlignment="textStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <TextView
+                android:id="@+id/textViewServiceListInit"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-            <TextView
-                    android:id="@+id/textViewServiceType"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#4CAF50"
-                    android:text="@string/order_service"
-                    android:textAlignment="textStart"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-
-            <TextView
-                    android:id="@+id/textViewServiceListInit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/textView_as_list"
-                    android:textAlignment="gravity"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                android:layout_height="wrap_content"
+                android:text="@string/textView_as_list"
+                android:textAlignment="gravity"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
         </TableRow>
 
         <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#4CAF50"
-                    android:text="@string/order_repairtype"
-                    android:textAlignment="textStart"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/order_repairtype"
+                android:textAlignment="textStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <TextView
-                    android:id="@+id/textViewRepairListInit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/textView_as_list"
-                    android:textAlignment="gravity"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                android:id="@+id/textViewRepairListInit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textView_as_list"
+                android:textAlignment="gravity"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
         </TableRow>
 
         <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#4CAF50"
-                    android:text="@string/order_clothetype"
-                    android:textAlignment="textStart"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/order_clothetype"
+                android:textAlignment="textStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <TextView
-                    android:id="@+id/textViewClotherListInit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/textView_as_list"
-                    android:textAlignment="gravity"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                android:id="@+id/textViewClotherListInit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textView_as_list"
+                android:textAlignment="gravity"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
         </TableRow>
 
     </TableLayout>
 
     <Button
-            android:id="@+id/btAddOrder_order"
-            android:layout_width="151dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="120dp"
-            android:text="@string/button_add_order"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+        android:id="@+id/btAddOrder_order"
+        android:layout_width="151dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="120dp"
+        android:text="@string/button_add_order"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
 
     <Button
-            android:id="@+id/btBack"
-            android:layout_width="150dp"
-            android:layout_height="81dp"
-            android:layout_marginStart="32dp"
-            android:text="@string/button_back"
-            app:layout_constraintStart_toEndOf="@+id/btAddOrder_order"
-            app:layout_constraintTop_toTopOf="@+id/btAddOrder_order" />
+        android:id="@+id/btBack"
+        android:layout_width="150dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="32dp"
+        android:text="@string/button_back"
+        app:layout_constraintStart_toEndOf="@+id/btAddOrder_order"
+        app:layout_constraintTop_toTopOf="@+id/btAddOrder_order" />
 
     <Button
-            android:id="@+id/btSaveOrder"
-            android:layout_width="115dp"
-            android:layout_height="89dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginBottom="88dp"
-            android:text="@string/button_save_order"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+        android:id="@+id/btSaveOrder"
+        android:layout_width="115dp"
+        android:layout_height="89dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="88dp"
+        android:text="@string/button_save_order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-            android:id="@+id/btRemoveOrder"
-            android:layout_width="107dp"
-            android:layout_height="88dp"
-            android:layout_marginStart="36dp"
-            android:backgroundTint="#E91E63"
-            android:text="@string/button_remove_order"
-            app:layout_constraintStart_toEndOf="@+id/btSaveOrder"
-            app:layout_constraintTop_toTopOf="@+id/btSaveOrder" />
+        android:id="@+id/btRemoveOrder"
+        android:layout_width="107dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="36dp"
+        android:backgroundTint="#5a2bcf"
+        android:text="@string/button_remove_order"
+        app:layout_constraintStart_toEndOf="@+id/btSaveOrder"
+        app:layout_constraintTop_toTopOf="@+id/btSaveOrder" />
 
     <Button
-            android:id="@+id/btCancel"
-            android:layout_width="99dp"
-            android:layout_height="86dp"
-            android:layout_marginStart="20dp"
-            android:text="@string/button_back"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btRemoveOrder"
-            app:layout_constraintTop_toTopOf="@+id/btRemoveOrder" />
+        android:id="@+id/btCancel"
+        android:layout_width="99dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/button_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btRemoveOrder"
+        app:layout_constraintTop_toTopOf="@+id/btRemoveOrder" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

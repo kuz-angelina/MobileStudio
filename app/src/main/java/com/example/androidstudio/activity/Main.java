@@ -21,82 +21,82 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Main extends AppCompatActivity
 {
-  Button btLogin;
-  EditText fieldLogin;
-  EditText fieldPass;
-  UserDto userDto;
-  Client client;
-  Manager manager;
-  Tailor tailor;
-  String login;
-  String pass;
+    Button btLogin;
+    EditText fieldLogin;
+    EditText fieldPass;
+    UserDto userDto;
+    Client client;
+    Manager manager;
+    Tailor tailor;
+    String login;
+    String pass;
 
-  @Override
-  protected void onCreate(Bundle savedInstanceState)
-  {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_main);
-    btLogin = findViewById(R.id.btLogin);
-    fieldLogin = findViewById(R.id.fieldLogin);
-    fieldPass = findViewById(R.id.fieldPass);
-    btLogin.setOnClickListener(new LoginListener());
-  }
-
-
-  class LoginListener implements View.OnClickListener
-  {
     @Override
-    public void onClick(View v)
+    protected void onCreate(Bundle savedInstanceState)
     {
-      login = String.valueOf(fieldLogin.getText());
-      pass = String.valueOf(fieldPass.getText());
-      GetUserTask getUserTask = new GetUserTask(getApplicationContext());
-      getUserTask.execute(login);
-      try
-      {
-        userDto = getUserTask.get();
-      }
-      catch (ExecutionException | InterruptedException e)
-      {
-        e.printStackTrace();
-      }
-      checkLogin(userDto);
-      assumeRoleAndContinue(userDto);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        btLogin = findViewById(R.id.btLogin);
+        fieldLogin = findViewById(R.id.fieldLogin);
+        fieldPass = findViewById(R.id.fieldPass);
+        btLogin.setOnClickListener(new LoginListener());
     }
-  }
-
-  private void assumeRoleAndContinue(UserDto userDto)
-  {
-    Intent intent = null;
-    switch (userDto.getUserType().getName())
-    {
-      case UserType.CLIENT:
-        client = new Client(userDto);
-        intent = new Intent(this, ClientActivity.class);
-        intent.putExtra(User.class.getSimpleName(), client);
-        break;
-      case UserType.MANAGER:
-        //          manager = new Manager(userDto);
-        //          new Intent(this, ManagerActivity.class);
-        //          intent.putExtra(User.class.getSimpleName(), manager);
-      case UserType.TAILOR:
-        //          tailor = new Tailor(userDto);
-        //          new Intent(this, TailorActivity.class);
-        //          intent.putExtra(User.class.getSimpleName(), manager);
-    }
-    startActivity(intent);
-  }
 
 
-  private void checkLogin(UserDto userDto)
-  {
-    if (userDto.getPassword() != null && userDto.getPassword().equals(pass))
+    class LoginListener implements View.OnClickListener
     {
-      Toast.makeText(this, "Succes", Toast.LENGTH_LONG).show();
+        @Override
+        public void onClick(View v)
+        {
+            login = String.valueOf(fieldLogin.getText());
+            pass = String.valueOf(fieldPass.getText());
+            GetUserTask getUserTask = new GetUserTask(getApplicationContext());
+            getUserTask.execute(login);
+            try
+            {
+                userDto = getUserTask.get();
+            }
+            catch (ExecutionException | InterruptedException e)
+            {
+                e.printStackTrace();
+            }
+            checkLogin(userDto);
+            assumeRoleAndContinue(userDto);
+        }
     }
-    else
+
+    private void assumeRoleAndContinue(UserDto userDto)
     {
-      Toast.makeText(this, "Incorect Login/Password", Toast.LENGTH_LONG).show();
+        Intent intent = null;
+        switch (userDto.getUserType().getName())
+        {
+            case UserType.CLIENT:
+                client = new Client(userDto);
+                intent = new Intent(this, ClientActivity.class);
+                intent.putExtra(User.class.getSimpleName(), client);
+                break;
+            case UserType.MANAGER:
+                //          manager = new Manager(userDto);
+                //          new Intent(this, ManagerActivity.class);
+                //          intent.putExtra(User.class.getSimpleName(), manager);
+            case UserType.TAILOR:
+                //          tailor = new Tailor(userDto);
+                //          new Intent(this, TailorActivity.class);
+                //          intent.putExtra(User.class.getSimpleName(), manager);
+        }
+        startActivity(intent);
     }
-  }
+
+
+    private void checkLogin(UserDto userDto)
+    {
+        if (userDto.getPassword() != null && userDto.getPassword().equals(pass))
+        {
+            Toast.makeText(this, "Succes", Toast.LENGTH_LONG).show();
+        }
+        else
+        {
+            Toast.makeText(this, "Incorect Login/Password", Toast.LENGTH_LONG).show();
+        }
+    }
 }

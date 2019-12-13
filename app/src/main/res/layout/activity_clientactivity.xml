@@ -1,140 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#393F3E"
-        tools:context=".activity.ClientActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9C97FD"
+    tools:context=".activity.ClientActivity">
 
     <Button
-            android:id="@+id/btShowOrders"
-            android:layout_width="158dp"
-            android:layout_height="62dp"
-            android:layout_marginStart="112dp"
-            android:layout_marginTop="360dp"
-            android:text="@string/button_show_order"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.174"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/btShowOrders"
+        android:layout_width="158dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="360dp"
+        android:text="@string/button_show_order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.174"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-            android:id="@+id/btAddOrder"
-            android:layout_width="159dp"
-            android:layout_height="68dp"
-            android:layout_marginTop="44dp"
-            android:text="@string/button_add_order"
-            app:layout_constraintStart_toStartOf="@+id/btShowOrders"
-            app:layout_constraintTop_toBottomOf="@+id/btShowOrders" />
+        android:id="@+id/btAddOrder"
+        android:layout_width="159dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/button_add_order"
+        app:layout_constraintStart_toStartOf="@+id/btShowOrders"
+        app:layout_constraintTop_toBottomOf="@+id/btShowOrders" />
 
     <TableLayout
-            android:id="@+id/tableUserInfo"
-            android:layout_width="416dp"
-            android:layout_height="197dp"
-            android:layout_marginTop="48dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.6"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewInfoUser">
+        android:id="@+id/tableUserInfo"
+        android:layout_width="416dp"
+        android:layout_height="197dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInfoUser">
 
         <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/tv_user_info_login"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+                android:id="@+id/textView"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_user_info_login"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
             <TextView
-                    android:id="@+id/textViewLogin"
-                    android:layout_width="220dp"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textColor="#4CAF50" />
+                android:id="@+id/textViewLogin"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="#4CAF50" />
         </TableRow>
 
         <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/tv_user_info_name"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_user_info_name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
             <TextView
-                    android:id="@+id/textViewName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textColor="#4CAF50" />
+                android:id="@+id/textViewName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="#4CAF50" />
         </TableRow>
 
         <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <TextView
-                    android:id="@+id/textView9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/tv_user_info_email"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_user_info_email"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
             <TextView
-                    android:id="@+id/textViewEmail"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textColor="#4CAF50" />
+                android:id="@+id/textViewEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="#4CAF50" />
         </TableRow>
 
         <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <TextView
-                    android:id="@+id/textView7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/tv_user_info_phone"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_user_info_phone"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
             <TextView
-                    android:id="@+id/textViewPhone"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textColor="#4CAF50" />
+                android:id="@+id/textViewPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="#4CAF50" />
         </TableRow>
 
     </TableLayout>
 
     <TextView
-            android:id="@+id/textViewInfoUser"
-            android:layout_width="330dp"
-            android:layout_height="39dp"
-            android:layout_marginTop="64dp"
-            android:text="@string/tv_user_info"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/textViewInfoUser"
+        android:layout_width="330dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/tv_user_info"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-            android:id="@+id/btLogout"
-            android:layout_width="151dp"
-            android:layout_height="66dp"
-            android:layout_marginTop="55dp"
-            android:text="@string/button_exit"
-            app:layout_constraintStart_toStartOf="@+id/btAddOrder"
-            app:layout_constraintTop_toBottomOf="@+id/btAddOrder" />
+        android:id="@+id/btLogout"
+        android:layout_width="151dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="55dp"
+        android:text="@string/button_back"
+        app:layout_constraintStart_toStartOf="@+id/btAddOrder"
+        app:layout_constraintTop_toBottomOf="@+id/btAddOrder" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,6 +13,8 @@ import com.example.androidstudio.services.OrderService;
 public class OrderServiceImpl implements OrderService
 {
 	String url;
+	//String url = "http://192.168.43.131:8080/order";
+
 	HessianProxyFactory factory = new HessianProxyFactory();
 	OrderService orderService;
 

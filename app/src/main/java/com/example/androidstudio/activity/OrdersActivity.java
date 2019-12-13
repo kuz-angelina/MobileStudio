@@ -108,7 +108,7 @@ public class OrdersActivity extends AppCompatActivity implements View.OnClickLis
   private void initGridHead()
   {
     setStyleTableLayout();
-    String[] strings = {getString(R.string.order_number), getString(R.string.order_number), getString(R.string.order_service),
+    String[] strings = {getString(R.string.order_number), getString(R.string.order_service),
             getString(R.string.order_repairtype), getString(R.string.order_clothetype), getString(R.string.order_cost)};
 
     addRowInTable(true, strings);
@@ -125,7 +125,7 @@ public class OrdersActivity extends AppCompatActivity implements View.OnClickLis
   {
     ShapeDrawable border = new ShapeDrawable(new RectShape());
     border.getPaint().setStyle(Paint.Style.STROKE);
-    border.getPaint().setColor(Color.RED);
+    border.getPaint().setColor(Color.BLUE);
 
     textView.setBackground(border);
     textView.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
@@ -135,7 +135,7 @@ public class OrdersActivity extends AppCompatActivity implements View.OnClickLis
   {
     ShapeDrawable border = new ShapeDrawable(new RectShape());
     border.getPaint().setStyle(Paint.Style.FILL_AND_STROKE);
-    border.getPaint().setColor(Color.GREEN);
+    border.getPaint().setColor(Color.BLUE);
 
     textView.setBackground(border);
     textView.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);

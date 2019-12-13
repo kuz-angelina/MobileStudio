@@ -50,9 +50,10 @@
         <item>Кофта</item>
         <item>Блузка</item>
         <item>Носки</item>
+        <item>Брюки</item>
     </string-array>
 
     <!--  url's  -->
-    <string name="url_order">http://192.168.88.254:8080/order</string>
-    <string name="url_user">http://192.168.88.254:8080/user</string>
+    <string name="url_order">http://10.206.216.36:8080/order</string>
+    <string name="url_user">http://10.206.216.36:8080/user</string>
 </resources>

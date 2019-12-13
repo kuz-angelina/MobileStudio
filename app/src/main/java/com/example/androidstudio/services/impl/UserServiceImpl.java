@@ -17,6 +17,8 @@ import android.app.Application;
 public class UserServiceImpl implements UserService
 {
 	String url;
+
+	//String url = "http://192.168.43.131:8080/user";
 	HessianProxyFactory factory = new HessianProxyFactory();
 	UserService userService;
 
