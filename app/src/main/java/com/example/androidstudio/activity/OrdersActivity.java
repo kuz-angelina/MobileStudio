@@ -140,7 +140,6 @@ public class OrdersActivity extends AppCompatActivity implements View.OnClickLis
     textView.setBackground(border);
     textView.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
     textView.setTextColor(getColor(R.color.order_table_textColor_head));
-    textView.setTextAppearance(R.style.TextAppearance_AppCompat_Medium);
   }
 
   @Override

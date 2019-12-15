@@ -26,7 +26,7 @@
     <string name="button_remove_order">Удалить заказ</string>
 
     <!--    text view as button -->
-    <string name="textView_as_list">Выберите значение…</string>
+    <string name="textView_as_list">Выберите…</string>
 
     <!--    notification -->
     <string name="order_add_complete">Заказ добавлен</string>
@@ -54,6 +54,6 @@
     </string-array>
 
     <!--  url's  -->
-    <string name="url_order">http://10.206.216.36:8080/order</string>
-    <string name="url_user">http://10.206.216.36:8080/user</string>
+    <string name="url_order">http://192.168.88.241:8080/order</string>
+    <string name="url_user">http://192.168.88.241:8080/user</string>
 </resources>
